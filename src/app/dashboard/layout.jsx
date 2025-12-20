@@ -1,5 +1,14 @@
-import DashboardLayout from '@/components/layout/DashboardLayout'
+'use client'
 
-export default function Layout({ children }) {
-  return <DashboardLayout>{children}</DashboardLayout>
+import DashboardLayout from '@/components/layout/DashboardLayout'
+import LenisProvider from '@/components/common/LenisProvider'
+
+export default function DashboardRootLayout({ children }) {
+  return (
+    <DashboardLayout>
+      <LenisProvider>
+        {children}
+      </LenisProvider>
+    </DashboardLayout>
+  )
 }
