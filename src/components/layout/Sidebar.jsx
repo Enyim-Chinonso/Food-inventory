@@ -1,22 +1,15 @@
-// 'use client'
+'use client'
 
-// export default function Sidebar() {
-//   return (
-//     <div className="bg-light border-end vh-100 p-3" style={{ width: '240px' }}>
-//       <ul className="nav flex-column">
-//         <li className="nav-item mb-2">
-//           <a className="nav-link active" href="/dashboard">Dashboard</a>
-//         </li>
-//         <li className="nav-item mb-2">
-//           <a className="nav-link" href="/inventory">Inventory</a>
-//         </li>
-//         <li className="nav-item mb-2">
-//           <a className="nav-link" href="/reports">Reports</a>
-//         </li>
-//         <li className="nav-item">
-//           <a className="nav-link" href="/settings">Settings</a>
-//         </li>
-//       </ul>
-//     </div>
-//   )
-// }
+export default function Sidebar() {
+  return (
+    <aside className="border-end p-3" style={{ width: '240px' }}>
+      <p className="fw-bold mb-3">Dashboard</p>
+      <ul className="nav flex-column gap-2">
+        <li className="nav-item">Overview</li>
+        <li className="nav-item">Inventory</li>
+        <li className="nav-item">Suppliers</li>
+        <li className="nav-item">Settings</li>
+      </ul>
+    </aside>
+  )
+}
