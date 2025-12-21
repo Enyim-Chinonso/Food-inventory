@@ -1,9 +1,39 @@
-/* .btn-invert {
-  transition: all 0.3s ease;
-}
+       
+       /* Navbar stylings */
+       .nav-hover {
+          position: relative;
+          transition: color 0.3s ease;
+        }
 
-.btn-invert:hover {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-} */
+        .nav-hover::after {
+          content: '';
+          position: absolute;
+          width: 0%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #f8f9fa;
+          transition: width 0.3s ease;
+        }
+
+        .nav-hover:hover {
+          color: #ffdd57 !important;
+        }
+
+        .nav-hover:hover::after {
+          width: 100%;
+        }
+        /* End of Navbar stylings */
+      
+
+        
+      /* CTA styling */
+        section {
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        a.btn:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s ease;
+        }
+      /* End of CTA styling */

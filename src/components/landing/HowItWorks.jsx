@@ -34,7 +34,7 @@ export default function HowItWorks() {
           {steps.map((step, index) => (
             <div key={index} className="col-md-6 col-lg-3">
               <div className="p-4 h-100 border rounded-4 text-center">
-                <div className="mb-3 fs-2 fw-bold text-primary">
+                <div className="mb-3 fs-2 fw-bold text-dark">
                   {index + 1}
                 </div>
                 <h5 className="fw-semibold">{step.title}</h5>
