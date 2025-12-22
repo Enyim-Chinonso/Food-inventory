@@ -16,7 +16,7 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <section className="py-5 bg-light">
+    <section className="py-5 bg-light mt-5">
       <div className="container" ref={sectionRef}>
         {/* Page Header */}
         <div className="text-center mb-5">

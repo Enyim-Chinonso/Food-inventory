@@ -94,7 +94,7 @@ export default function PublicNavbar() {
               <a
                 ref={(el) => setLinkRef(el, 0)}
                 className="nav-link text-white nav-hover"
-                href="#features"
+                href="/#features"
                 onClick={handleNavLinkClick}
               >
                 Features
