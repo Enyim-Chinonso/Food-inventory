@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export default function PublicNavbar() {
-  const navRef = useRef(null)
-  const linksRef = useRef([])
-  const collapseRef = useRef(null)
-  const bsCollapseRef = useRef(null) // store the collapse instance
+  const navRef = useRef(null);
+  const linksRef = useRef([]);
+  const collapseRef = useRef(null);
+  const bsCollapseRef = useRef(null); // store the collapse instance
 
   useEffect(() => {
     // Navbar entrance animation
@@ -15,8 +15,8 @@ export default function PublicNavbar() {
       y: -80,
       opacity: 0,
       duration: 1,
-      ease: 'power3.out',
-    })
+      ease: "power3.out",
+    });
 
     // Animate nav links on load
     gsap.from(linksRef.current, {
@@ -25,37 +25,39 @@ export default function PublicNavbar() {
       duration: 0.8,
       delay: 0.5,
       stagger: 0.1,
-      ease: 'power3.out',
-    })
+      ease: "power3.out",
+    });
 
     // Dynamically import Bootstrap Collapse only on client
     const setupCollapse = async () => {
-      if (!collapseRef.current) return
-      const Collapse = (await import('bootstrap/js/dist/collapse')).default
-      bsCollapseRef.current = new Collapse(collapseRef.current, { toggle: false })
+      if (!collapseRef.current) return;
+      const Collapse = (await import("bootstrap/js/dist/collapse")).default;
+      bsCollapseRef.current = new Collapse(collapseRef.current, {
+        toggle: false,
+      });
 
-      collapseRef.current.addEventListener('show.bs.collapse', () => {
+      collapseRef.current.addEventListener("show.bs.collapse", () => {
         gsap.fromTo(
           linksRef.current,
           { x: -50, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: 'power3.out' }
-        )
-      })
-    }
+          { x: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power3.out" }
+        );
+      });
+    };
 
-    setupCollapse()
-  }, [])
+    setupCollapse();
+  }, []);
 
   // Collapse the navbar on mobile when a link is clicked
   const handleNavLinkClick = () => {
     if (bsCollapseRef.current && window.innerWidth < 992) {
-      bsCollapseRef.current.hide()
+      bsCollapseRef.current.hide();
     }
-  }
+  };
 
   const setLinkRef = (el, index) => {
-    linksRef.current[index] = el
-  }
+    linksRef.current[index] = el;
+  };
 
   return (
     <nav
@@ -82,7 +84,11 @@ export default function PublicNavbar() {
         </button>
 
         {/* Navbar Links */}
-        <div className="collapse navbar-collapse" id="navbarSupportedContent" ref={collapseRef}>
+        <div
+          className="collapse navbar-collapse"
+          id="navbarSupportedContent"
+          ref={collapseRef}
+        >
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
             <li className="nav-item">
               <a
@@ -94,11 +100,12 @@ export default function PublicNavbar() {
                 Features
               </a>
             </li>
+            
             <li className="nav-item">
               <a
                 ref={(el) => setLinkRef(el, 1)}
                 className="nav-link text-white nav-hover"
-                href="#about"
+                href="/about"
                 onClick={handleNavLinkClick}
               >
                 About
@@ -118,5 +125,5 @@ export default function PublicNavbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
