@@ -40,15 +40,15 @@ export default function ContactPage() {
 
             <ul className="list-unstyled mt-4 small">
               <li className="mb-3">
-                <i className="fas fa-envelope me-2 text-primary"></i>
+                <i className="fas fa-envelope me-2 text-dark"></i>
                 support@foodinventory.com
               </li>
               <li className="mb-3">
-                <i className="fas fa-phone me-2 text-primary"></i>
+                <i className="fas fa-phone me-2 text-dark"></i>
                 +234 XXX XXX XXXX
               </li>
               <li className="mb-3">
-                <i className="fas fa-map-marker-alt me-2 text-primary"></i>
+                <i className="fas fa-map-marker-alt me-2 text-dark"></i>
                 Nigeria
               </li>
             </ul>
@@ -64,7 +64,7 @@ export default function ContactPage() {
               <a href="https://web.facebook.com/?_rdc=1&_rdr#" className="text-dark fs-4">
                 <i className="fab fa-facebook"></i>
               </a>
-              <a href="#" className="text-dark fs-4">
+              <a href="https://www.linkedin.com/in/chinonso-enyim-1435762a1/" className="text-dark fs-4">
                 <i className="fab fa-linkedin"></i>
               </a>
             </div>
@@ -78,8 +78,8 @@ export default function ContactPage() {
 
                 <form>
                   <div className="mb-3">
-                    <label className="form-label">Full Name</label>
-                    <input
+                    <label htmlFor='name' className="form-label">Full Name</label>
+                    <input id='name'
                       type="text"
                       className="form-control"
                       placeholder="Your name"
@@ -87,8 +87,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="mb-3">
-                    <label className="form-label">Email Address</label>
-                    <input
+                    <label htmlFor='email' className="form-label">Email Address</label>
+                    <input id='email'
                       type="email"
                       className="form-control"
                       placeholder="you@example.com"
@@ -96,15 +96,15 @@ export default function ContactPage() {
                   </div>
 
                   <div className="mb-3">
-                    <label className="form-label">Message</label>
-                    <textarea
+                    <label htmlFor='message' className="form-label">Message</label>
+                    <textarea id='message'
                       className="form-control"
                       rows="4"
                       placeholder="Write your message here..."
                     ></textarea>
                   </div>
 
-                  <button className="btn btn-primary px-4">
+                  <button className="btn btn-dark px-4">
                     Send Message
                   </button>
                 </form>
