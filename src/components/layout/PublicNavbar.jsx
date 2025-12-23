@@ -111,6 +111,18 @@ export default function PublicNavbar() {
                 About
               </a>
             </li>
+
+            <li className="nav-item">
+              <a
+                ref={(el) => setLinkRef(el, 1)}
+                className="nav-link text-white nav-hover"
+                href="/contact"
+                onClick={handleNavLinkClick}
+              >
+                Contact
+              </a>
+            </li>
+
             <li className="nav-item">
               <a
                 ref={(el) => setLinkRef(el, 2)}
