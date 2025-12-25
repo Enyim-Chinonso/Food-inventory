@@ -77,7 +77,7 @@ export default function LoginPage() {
                       </label>
                     </div> 
 
-                    <a href="#" className="text-decoration-none">
+                    <a href="/forgot-password" className="text-decoration-none">
                       Forgot password?
                     </a>
                   </div>
