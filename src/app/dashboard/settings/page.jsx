@@ -48,16 +48,18 @@ export default function SettingsPage() {
               <h5 className="fw-semibold mb-3">Profile</h5>
 
               <div className="mb-3">
-                <label className="form-label">Full Name</label>
-                <input type="text" className="form-control" value="Admin User" />
+                <label htmlFor='name' className="form-label">Full Name</label>
+                <input id='name' type="text" className="form-control" 
+                defaultValue="Admin User" />
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Email Address</label>
+                <label htmlFor='email' className="form-label">Email Address</label>
                 <input
+                  id='email'
                   type="email"
                   className="form-control"
-                  value="admin@foodinventory.com"
+                  defaultValue="admin@foodinventory.com"
                 />
               </div>
 
@@ -111,13 +113,13 @@ export default function SettingsPage() {
               <h5 className="fw-semibold mb-3">Security</h5>
 
               <div className="mb-3">
-                <label className="form-label">Current Password</label>
-                <input type="password" className="form-control" />
+                <label htmlFor='pass' className="form-label">Current Password</label>
+                <input id='pass' type="password" className="form-control" />
               </div>
 
               <div className="mb-3">
-                <label className="form-label">New Password</label>
-                <input type="password" className="form-control" />
+                <label htmlFor='newpass' className="form-label">New Password</label>
+                <input id='newpass' type="password" className="form-control" />
               </div>
 
               <button className="btn btn-outline-primary">

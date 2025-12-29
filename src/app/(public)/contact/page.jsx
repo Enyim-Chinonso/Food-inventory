@@ -45,7 +45,7 @@ export default function ContactPage() {
               </li>
               <li className="mb-3">
                 <i className="fas fa-phone me-2 text-dark"></i>
-                +234 XXX XXX XXXX
+                +234 810 811 1761
               </li>
               <li className="mb-3">
                 <i className="fas fa-map-marker-alt me-2 text-dark"></i>
