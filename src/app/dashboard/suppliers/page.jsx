@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import DashboardHeader from '@/components/DashboardHeader'
 
 export default function SuppliersPage() {
   const headerRef = useRef(null)
@@ -26,13 +27,7 @@ export default function SuppliersPage() {
 
   return (
     <>
-      {/* Page Header */}
-      <div ref={headerRef} className="mb-4">
-        <h2 className="fw-bold mb-1">Suppliers</h2>
-        <p className="text-muted mb-0">
-          Manage suppliers, contacts, and supply relationships
-        </p>
-      </div>
+    <DashboardHeader title="Suppliers Dashboard" />
 
       {/* Controls */}
       <div className="d-flex flex-wrap gap-3 mb-4">

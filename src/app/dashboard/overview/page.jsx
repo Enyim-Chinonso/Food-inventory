@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import DashboardHeader from '@/components/DashboardHeader'
 
 export default function DashboardPage() {
   const headerRef = useRef(null)
@@ -36,12 +37,23 @@ export default function DashboardPage() {
 
   return (
     <>
+    <DashboardHeader title="Overview Dashboard" />
+
       {/* Page Header */}
       <div ref={headerRef} className="mb-4">
         <h2 className="fw-bold mb-1">Dashboard Overview</h2>
         <p className="text-muted mb-0">
           Monitor your inventory health and key activities
         </p>
+
+<button
+  className="btn btn-sm btn-outline-secondary"
+  onClick={() => router.push('/dashboard-select')}
+>
+  Switch Dashboard
+</button>
+
+
       </div>
 
       {/* KPI Cards */}

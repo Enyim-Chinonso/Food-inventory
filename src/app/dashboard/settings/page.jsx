@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import DashboardHeader from '@/components/DashboardHeader'
 
 export default function SettingsPage() {
   const headerRef = useRef(null)
@@ -27,6 +28,9 @@ export default function SettingsPage() {
 
   return (
     <>
+   
+      <DashboardHeader title="Settings Dashboard" />
+
       {/* Page Header */}
       <div ref={headerRef} className="mb-4">
         <h2 className="fw-bold mb-1">Settings</h2>
